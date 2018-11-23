@@ -177,11 +177,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="关于博客的搭建"><a href="#关于博客的搭建" class="headerlink" title="关于博客的搭建"></a>关于博客的搭建</h3><p>   基础构建部分可以参考<a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">这篇博客</a></p>
+<h3 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h3><p>   请参考文章<a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown基本语法</a></p>
 <h3 id="关于yilla主题的设置问题"><a href="#关于yilla主题的设置问题" class="headerlink" title="关于yilla主题的设置问题"></a>关于yilla主题的设置问题</h3><p>   请参考<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">github</a><br>   配置问题请参考上面链接中的作者的<a href="https://github.com/litten/BlogBackup" target="_blank" rel="noopener">博客备份</a></p>
-<h3 id="关于博客布置成功之后头像显示问题"><a href="#关于博客布置成功之后头像显示问题" class="headerlink" title="关于博客布置成功之后头像显示问题"></a>关于博客布置成功之后头像显示问题</h3><p>   1.将主题<strong><em>themes/yilia/layout/_partial/left-col.ejs</em></strong>下面的第六行代码<br>   <code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar&quot;&gt;</code><br>   更改为<br>  <code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</code></p>
-<p>   2.在<strong>themes/yilia/_config.yml</strong>文件中找到<strong>avatar</strong>头像字段，更改为你想设置的图片路径。<br>  例如在<strong>source</strong>文件夹下面建立<strong>images</strong>文件夹，传入<strong>me.jpg</strong>文件，此时的代码为<br>  <strong>avatar: ‘/images/me.jpg’</strong></p>
-<p>   3.此类问题一般都是路径错误的问题，所以应了解如下三个路径的区别<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&apos;./images/me.jpg&apos;</span><br><span class="line">&apos;images/me.jpg&apos;</span><br><span class="line">&apos;/images/me.jpg&apos;</span><br></pre></td></tr></table></figure></p>
-<p>   4.如若还没有解决掉头像的问题，也可以参考这个<a href="https://github.com/litten/hexo-theme-yilia/issues/288" target="_blank" rel="noopener">issue</a></p>
+<h3 id="关于博客布置成功之后头像显示问题"><a href="#关于博客布置成功之后头像显示问题" class="headerlink" title="关于博客布置成功之后头像显示问题"></a>关于博客布置成功之后头像显示问题</h3><ol>
+<li><p>将主题<strong><em>themes/yilia/layout/_partial/left-col.ejs</em></strong>下面的第六行代码<br><code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar&quot;&gt;</code><br>更改为<br><code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</code></p>
+</li>
+<li><p>在<strong>themes/yilia/_config.yml</strong>文件中找到<strong>avatar</strong>头像字段，更改为你想设置的图片路径。<br>例如在<strong>source</strong>文件夹下面建立<strong>images</strong>文件夹，传入<strong>me.jpg</strong>文件，此时的代码为<br><strong>avatar: ‘/images/me.jpg’</strong></p>
+</li>
+<li><p>此类问题一般都是路径错误的问题，所以应了解如下三个路径的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&apos;./images/me.jpg&apos;</span><br><span class="line">$&apos;images/me.jpg&apos;</span><br><span class="line">$&apos;/images/me.jpg&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如若还没有解决掉头像的问题，也可以参考这个<a href="https://github.com/litten/hexo-theme-yilia/issues/288" target="_blank" rel="noopener">issue</a></p>
+</li>
+</ol>
 
       
 
