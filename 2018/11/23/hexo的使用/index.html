@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://baidu.com">
   <title>hexo布置博客的过程中头像的处理 | benzzle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于博客布置成功之后头像显示问题需要处理好路径对应关系明白一下路径的区别12345678910111213将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码&amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;更改为&amp;lt;img src=&amp;">
+  <meta name="description" content="关于博客布置成功之后头像显示问题  1.将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;  更改为  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt">
 <meta name="keywords" content="头像">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo布置博客的过程中头像的处理">
 <meta property="og:url" content="http://baidu.com/2018/11/23/hexo的使用/index.html">
 <meta property="og:site_name" content="benzzle的博客">
-<meta property="og:description" content="关于博客布置成功之后头像显示问题需要处理好路径对应关系明白一下路径的区别12345678910111213将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码&amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;更改为&amp;lt;img src=&amp;">
+<meta property="og:description" content="关于博客布置成功之后头像显示问题  1.将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;  更改为  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-23T06:30:52.668Z">
+<meta property="og:updated_time" content="2018-11-23T06:35:39.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo布置博客的过程中头像的处理">
-<meta name="twitter:description" content="关于博客布置成功之后头像显示问题需要处理好路径对应关系明白一下路径的区别12345678910111213将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码&amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;更改为&amp;lt;img src=&amp;">
+<meta name="twitter:description" content="关于博客布置成功之后头像显示问题  1.将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt;&amp;quot; class=&amp;quot;js-avatar&amp;quot;&amp;gt;  更改为  &amp;lt;img src=&amp;quot;&amp;lt;%=theme.avatar%&amp;gt">
   
     <link rel="alternative" href="/atom.xml" title="benzzle的博客" type="application/atom+xml">
   
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="关于博客布置成功之后头像显示问题"><a href="#关于博客布置成功之后头像显示问题" class="headerlink" title="关于博客布置成功之后头像显示问题"></a>关于博客布置成功之后头像显示问题</h3><h4 id="需要处理好路径对应关系明白一下路径的区别"><a href="#需要处理好路径对应关系明白一下路径的区别" class="headerlink" title="需要处理好路径对应关系明白一下路径的区别"></a>需要处理好路径对应关系明白一下路径的区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码</span><br><span class="line">&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar&quot;&gt;</span><br><span class="line">更改为</span><br><span class="line">&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</span><br><span class="line">同时在themes/yilia/_config.yml文件中找到avatar头像字段，更改为你想设置的图片路径</span><br><span class="line">例如在source文件夹下面建立images文件夹，传入me.jpg文件，此时的代码为</span><br><span class="line">**avatar: &apos;/images/me.jpg&apos;**</span><br><span class="line">应了解如下三个路径的区别</span><br><span class="line">&apos;./images/me.jpg&apos;</span><br><span class="line">&apos;images/me.jpg&apos;</span><br><span class="line">&apos;/images/me.jpg&apos;</span><br><span class="line">如若还没有解决掉头像的问题，也可以参考这个[issue](https://github.com/litten/hexo-theme-yilia/issues/288)</span><br></pre></td></tr></table></figure>
+        <h3 id="关于博客布置成功之后头像显示问题"><a href="#关于博客布置成功之后头像显示问题" class="headerlink" title="关于博客布置成功之后头像显示问题"></a>关于博客布置成功之后头像显示问题</h3><p>  1.将主题themes/yilia/layout/_partial/left-col.ejs下面的第六行代码<br>  <code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar&quot;&gt;</code><br>  更改为<br>  <code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</code><br>  2.在<strong>themes/yilia/_config.yml</strong>文件中找到avatar头像字段，更改为你想设置的图片路径，例如在source文件夹下面建立images文件夹，传入me.jpg文件，此时的代码为<br>  <strong>avatar: ‘/images/me.jpg’</strong><br>  3.此类问题一般都是路径错误的问题，所以应了解如下三个路径的区别<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&apos;./images/me.jpg&apos;</span><br><span class="line">&apos;images/me.jpg&apos;</span><br><span class="line">&apos;/images/me.jpg&apos;</span><br></pre></td></tr></table></figure></p>
+<p>  4.如若还没有解决掉头像的问题，也可以参考这个<a href="https://github.com/litten/hexo-theme-yilia/issues/288" target="_blank" rel="noopener">issue</a></p>
+
       
 
       
