@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://baidu.com">
   <title>benzzle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
+  <meta name="description" content="水果                 .title{       height: 40px;       line-height: 40px;       font-size: 24px;       font-weight: 900;       margin-top: 20px;     }     .content{       border-left: 1px">
 <meta name="keywords" content="前端,js,javascript,html5,vue,开发者,程序猿,程序媛,hexo,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="website">
 <meta property="og:title" content="benzzle的博客">
 <meta property="og:url" content="http://baidu.com/web/fruit.html">
 <meta property="og:site_name" content="benzzle的博客">
-<meta property="og:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
+<meta property="og:description" content="水果                 .title{       height: 40px;       line-height: 40px;       font-size: 24px;       font-weight: 900;       margin-top: 20px;     }     .content{       border-left: 1px">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-23T10:23:53.329Z">
+<meta property="og:updated_time" content="2018-11-23T10:51:05.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="benzzle的博客">
-<meta name="twitter:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
+<meta name="twitter:description" content="水果                 .title{       height: 40px;       line-height: 40px;       font-size: 24px;       font-weight: 900;       margin-top: 20px;     }     .content{       border-left: 1px">
   
     <link rel="alternative" href="/atom.xml" title="benzzle的博客" type="application/atom+xml">
   
@@ -166,16 +166,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/iview/dist/styles/iview.css">
+  <title>水果</title>
+  <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/iview/dist/styles/iview.css"> -->
   <script type="text/javascript" src="https://vuejs.org/js/vue.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/iview/dist/iview.min.js"></script>
+  <!-- <script type="text/javascript" src="https://unpkg.com/iview/dist/iview.min.js"></script> -->
+  <style>
+    .title{
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+      font-weight: 900;
+      margin-top: 20px;
+    }
+    .content{
+      border-left: 1px solid #8d8d8d;
+      border-top: 1px solid #8d8d8d;
+      background: yellow;
+    }
+    .flex-item{
+      display: flex;
+    }
+    .left{
+      width: 80px;
+      flex: none;
+      border-right: 1px solid #8d8d8d;
+      border-bottom: 1px solid #8d8d8d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .right{
+      flex: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #8d8d8d;
+      border-bottom: 1px solid #8d8d8d;
+      padding: 10px;
+    }
+
+  </style>
 </head>
 <body>
   <div id="app">
-    <!-- <i-input></i-input> -->
-    <div>
-      <i-table border="" :columns="column" :data="fruit"></i-table>
+    <header style="background:pink">
+        <p class="title">不可以吃的水果</p>
+    </header>
+    <div class="content">
+      <div class="flex-item">
+        <div class="left">水果名</div>
+        <div class="right">原因</div>
+      </div>
+      <div class="flex-item" v-for="item in fruit">
+        <div class="left" v-text="item.name"></div>
+        <div class="right" v-text="item.reason"></div>
+      </div>
     </div>
   </div>
 </body>
@@ -186,16 +231,6 @@
   new Vue({
     el: "#app",
     data: {
-      column: [
-        {
-          title: '名称',
-          key: 'name',
-          width: 100
-        },{
-          title: '原因',
-          key: 'reason'
-        }
-      ],
       fruit: [
         {
           name: "西瓜",
