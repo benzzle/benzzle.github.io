@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://baidu.com">
   <title>benzzle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;         },{">
+  <meta name="description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
 <meta name="keywords" content="前端,js,javascript,html5,vue,开发者,程序猿,程序媛,hexo,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="website">
 <meta property="og:title" content="benzzle的博客">
 <meta property="og:url" content="http://baidu.com/web/fruit.html">
 <meta property="og:site_name" content="benzzle的博客">
-<meta property="og:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;         },{">
+<meta property="og:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-23T10:21:42.917Z">
+<meta property="og:updated_time" content="2018-11-23T10:23:53.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="benzzle的博客">
-<meta name="twitter:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;         },{">
+<meta name="twitter:description" content="Document                                                 new Vue({     el: &quot;#app&quot;,     data: {       column: [         {           title: &apos;名称&apos;,           key: &apos;name&apos;,           width: 10">
   
     <link rel="alternative" href="/atom.xml" title="benzzle的博客" type="application/atom+xml">
   
@@ -173,7 +173,7 @@
 </head>
 <body>
   <div id="app">
-    <i-input></i-input>
+    <!-- <i-input></i-input> -->
     <div>
       <i-table border="" :columns="column" :data="fruit"></i-table>
     </div>
@@ -189,7 +189,8 @@
       column: [
         {
           title: '名称',
-          key: 'name'
+          key: 'name',
+          width: 100
         },{
           title: '原因',
           key: 'reason'
